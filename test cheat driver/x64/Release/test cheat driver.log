@@ -1,0 +1,25 @@
+﻿  Building 'test cheat driver' with toolset 'WindowsKernelModeDriver10.0' and the 'Universal' target platform.
+  Stamping x64\Release\testcheatdriver.inf
+  Stamping [Version] section with DriverVer=10/30/2022,13.54.41.936
+  Driver.c
+C:\Users\Flat\source\repos\test cheat driver\test cheat driver\Driver.c(18,54): warning C4100: 'Irp': unreferenced formal parameter
+C:\Users\Flat\source\repos\test cheat driver\test cheat driver\Driver.c(18,35): warning C4100: 'DeviceObject': unreferenced formal parameter
+C:\Users\Flat\source\repos\test cheat driver\test cheat driver\Driver.c(24,36): warning C4100: 'DeviceObject': unreferenced formal parameter
+C:\Users\Flat\source\repos\test cheat driver\test cheat driver\Driver.c(33,35): warning C4100: 'DeviceObject': unreferenced formal parameter
+C:\Users\Flat\source\repos\test cheat driver\test cheat driver\Driver.c(42,78): warning C4100: 'RegistryPath': unreferenced formal parameter
+C:\Users\Flat\source\repos\test cheat driver\test cheat driver\Driver.c(49,11): warning C4189: 'NtRet2': local variable is initialized but not referenced
+C:\Users\Flat\source\repos\test cheat driver\test cheat driver\Driver.c(48,17): warning C4101: 'deviceNameUnicodeString': unreferenced local variable
+C:\Users\Flat\source\repos\test cheat driver\test cheat driver\Driver.c(48,42): warning C4101: 'deviceSymLinkUnicodeString': unreferenced local variable
+  test cheat driver.vcxproj -> C:\Users\Flat\source\repos\test cheat driver\x64\Release\testcheatdriver.sys
+  Driver is 'Universal'.
+  ........................
+  Signability test complete.
+  
+  Errors:
+  None
+  
+  Warnings:
+  None
+  
+  Catalog generation complete.
+  C:\Users\Flat\source\repos\test cheat driver\x64\Release\test cheat driver\testcheatdriver.cat

@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32929.385
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "test cheat driver", "test cheat driver\test cheat driver.vcxproj", "{6A7AD97C-B1E3-4684-B866-A9158D0E560A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|ARM64 = Debug|ARM64
+		Debug|x64 = Debug|x64
+		Release|ARM64 = Release|ARM64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6A7AD97C-B1E3-4684-B866-A9158D0E560A}.Debug|ARM64.ActiveCfg = Debug|ARM64
+		{6A7AD97C-B1E3-4684-B866-A9158D0E560A}.Debug|ARM64.Build.0 = Debug|ARM64
+		{6A7AD97C-B1E3-4684-B866-A9158D0E560A}.Debug|ARM64.Deploy.0 = Debug|ARM64
+		{6A7AD97C-B1E3-4684-B866-A9158D0E560A}.Debug|x64.ActiveCfg = Debug|x64
+		{6A7AD97C-B1E3-4684-B866-A9158D0E560A}.Debug|x64.Build.0 = Debug|x64
+		{6A7AD97C-B1E3-4684-B866-A9158D0E560A}.Debug|x64.Deploy.0 = Debug|x64
+		{6A7AD97C-B1E3-4684-B866-A9158D0E560A}.Release|ARM64.ActiveCfg = Release|ARM64
+		{6A7AD97C-B1E3-4684-B866-A9158D0E560A}.Release|ARM64.Build.0 = Release|ARM64
+		{6A7AD97C-B1E3-4684-B866-A9158D0E560A}.Release|ARM64.Deploy.0 = Release|ARM64
+		{6A7AD97C-B1E3-4684-B866-A9158D0E560A}.Release|x64.ActiveCfg = Release|x64
+		{6A7AD97C-B1E3-4684-B866-A9158D0E560A}.Release|x64.Build.0 = Release|x64
+		{6A7AD97C-B1E3-4684-B866-A9158D0E560A}.Release|x64.Deploy.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AC2BD3B3-B7F4-4CF6-A760-49D25532FDF5}
+	EndGlobalSection
+EndGlobal

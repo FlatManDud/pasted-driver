@@ -1,0 +1,80 @@
+;
+; testcheatdriver.inf
+;
+
+[Version]
+Signature="$WINDOWS NT$"
+Class=System ; TODO: specify appropriate Class
+ClassGuid={4d36e97d-e325-11ce-bfc1-08002be10318} ; TODO: specify appropriate ClassGuid
+Provider=%ManufacturerName%
+CatalogFile=testcheatdriver.cat
+DriverVer = 10/30/2022,13.54.41.936
+PnpLockdown=1
+
+[DestinationDirs]
+DefaultDestDir = 12
+testcheatdriver_Device_CoInstaller_CopyFiles = 11
+
+[SourceDisksNames]
+1 = %DiskName%,,,""
+
+[SourceDisksFiles]
+testcheatdriver.sys  = 1,,
+;
+
+
+;*****************************************
+; Install Section
+;*****************************************
+
+[Manufacturer]
+%ManufacturerName%=Standard,NTamd64
+
+[Standard.NTamd64]
+%testcheatdriver.DeviceDesc%=testcheatdriver_Device, Root\testcheatdriver ; TODO: edit hw-id
+
+[testcheatdriver_Device.NT]
+CopyFiles=Drivers_Dir
+
+[Drivers_Dir]
+testcheatdriver.sys
+
+;-------------- Service installation
+[testcheatdriver_Device.NT.Services]
+AddService = testcheatdriver,%SPSVCINST_ASSOCSERVICE%, testcheatdriver_Service_Inst
+
+; -------------- testcheatdriver driver install sections
+[testcheatdriver_Service_Inst]
+DisplayName    = %testcheatdriver.SVCDESC%
+ServiceType    = 1               ; SERVICE_KERNEL_DRIVER
+StartType      = 3               ; SERVICE_DEMAND_START
+ErrorControl   = 1               ; SERVICE_ERROR_NORMAL
+ServiceBinary  = %12%\testcheatdriver.sys
+
+;
+;--- testcheatdriver_Device Coinstaller installation ------
+;
+
+[testcheatdriver_Device.NT.CoInstallers]
+AddReg=testcheatdriver_Device_CoInstaller_AddReg
+CopyFiles=testcheatdriver_Device_CoInstaller_CopyFiles
+
+[testcheatdriver_Device_CoInstaller_AddReg]
+;
+
+
+[testcheatdriver_Device_CoInstaller_CopyFiles]
+;
+
+
+[testcheatdriver_Device.NT.Wdf]
+KmdfService =  testcheatdriver, testcheatdriver_wdfsect
+[testcheatdriver_wdfsect]
+KmdfLibraryVersion = 1.15
+
+[Strings]
+SPSVCINST_ASSOCSERVICE= 0x00000002
+ManufacturerName="<Your manufacturer name>" ;TODO: Replace with your manufacturer name
+DiskName = "testcheatdriver Installation Disk"
+testcheatdriver.DeviceDesc = "testcheatdriver Device"
+testcheatdriver.SVCDESC = "testcheatdriver Service"
